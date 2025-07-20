@@ -8,9 +8,28 @@ export default function CasinoLanding() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const [players, setPlayers] = useState(10000);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
-  const [typedText, setTypedText] = useState("");
-  const fullText = "¡ Bienvenido a Ganamos365!";
-  const waLink = "https://wa.link/tkst67";
+  const waLink = "https://tiny.one/2p8dh8ks";
+
+  let CTAButton = (
+    <div ref={ctaRef} className="flex justify-center mb-12 animate-bounce">
+      <a
+        href={waLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-10 py-3 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
+        onClick={() => {
+          if (
+            typeof window !== "undefined" &&
+            typeof (window as any).fbq === "function"
+          ) {
+            (window as any).fbq("track", "Lead");
+          }
+        }}
+      >
+        🎁 Contactar con una cajera
+      </a>
+    </div>
+  );
 
   const randomizePlayers = () => {
     setTimeout(() => {
@@ -28,28 +47,15 @@ export default function CasinoLanding() {
     const handleScroll = () => {
       if (ctaRef.current) {
         const rect = ctaRef.current.getBoundingClientRect();
-        setShowStickyCTA(rect.bottom < 0);
+        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        setShowStickyCTA(!isVisible);
       }
     };
+    
 
     randomizePlayers();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    let index = 0;
-
-    const interval = setInterval(() => {
-      if (index < fullText.length - 1) {
-        setTypedText((prev) => prev + fullText[index]);
-        index += 1;
-      } else {
-        clearInterval(interval);
-      }
-    }, 80);
-
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -61,58 +67,41 @@ export default function CasinoLanding() {
       </div>
 
       <div className="relative z-10 px-4 py-10 max-w-screen-xl mx-auto">
-        <div className="flex justify-center mb-6">
-          <Image src="/logo.webp" alt="logo" width={150} height={150} />
+        <div className="flex justify-center mb-[-50px] mt-[-50px]">
+          <Image src="/logo.png" alt="logo" width={300} height={300} />
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-2">
-          {typedText}
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 ">
+          Bienvenidos a Pepestars
           <span className="animate-pulse">|</span>
         </h1>
         <p className="text-center text-gray-200 mb-10 max-w-2xl mx-auto">
-          Tu destino online para la mejor experiencia en juegos de azar y
-          promociones exclusivas.
+          Tu destino online para la mejor experiencia en juegos y promociones
+          exclusivas.
         </p>
 
-        <div ref={ctaRef} className="flex justify-center mb-12 animate-bounce">
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-10 py-3 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
-            onClick={() => {
-              if (
-                typeof window !== "undefined" &&
-                typeof (window as any).fbq === "function"
-              ) {
-                (window as any).fbq("track", "Lead");
-              }
-            }}
-          >
-            🎁 Obtener mi bono YA!
-          </a>
-        </div>
+        {CTAButton}
 
         <div className="grid grid-cols-2 sm:grid-cols-3 max-w-4xl gap-3 sm:gap-5 mx-auto mb-6">
           <Card
             icon="💰"
-            title="20% en el primer deposito"
-            description="Obtené un bono del 20% en tu primer depósito."
+            title="50% en el primer d3posito"
+            description="Obtené un bonus del 50% en tu primer depósito."
           />
           <Card
             icon="🎯"
             title="Mínimo $2000"
-            description="Ingresá al juego con un depósito mínimo de $2000."
+            description="Ingresá al ju3go con un d3pósito mínimo de $2000."
           />
           <Card
             icon="💳"
             title="Aceptamos Mercado Pago"
-            description="Pagá con comodidad usando tu billetera favorita."
+            description="Pag4 con comodidad usando tu billetera favorita."
           />
           <Card
             icon="⏱️"
-            title="Retiros 24hs"
-            description="Tu dinero disponible en cualquier momento."
+            title="R3tiros 24hs"
+            description="Tu din3ro disponible en cualquier momento."
           />
           <Card
             icon="👥"
@@ -135,17 +124,17 @@ export default function CasinoLanding() {
             <Testimonial
               name="Lucía R."
               rating={5}
-              message="Muy confiable y fácil de usar. Me sorprendió lo rápido que procesan los retiros. ¡Volvería a jugar sin dudarlo!"
+              message="Muy confiable y fácil de usar. Me sorprendió lo rápido que procesan los r3tiros. ¡Volvería a jugar sin dudarlo!"
             />
             <Testimonial
               name="Carlos M."
               rating={4}
-              message="Tienen mucha variedad de juegos y responden rápido por WhatsApp. Lo recomiendo si estás buscando un casino serio."
+              message="Tienen mucha variedad de ju3gos y responden rápido por WhatsApp. Lo recomiendo si estás buscando un c4sino serio."
             />
             <Testimonial
               name="Julián D."
               rating={5}
-              message="Se gana seguido y los bonos realmente ayudan. Muy buena atención y pagos puntuales. ¡Gran experiencia!"
+              message="Se gana seguido y los bonus realmente ayudan. Muy buena atención y p4gos puntuales. ¡Gran experiencia!"
             />
           </div>
         </section>
@@ -164,27 +153,12 @@ export default function CasinoLanding() {
           </h2>
         </div>
         {showStickyCTA && (
-          <div className="fixed bottom-4 inset-x-0 flex justify-center z-50 animate-pulse">
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 text-white font-semibold text-base px-6 py-3 rounded-full shadow-lg hover:bg-green-700 transition-all duration-300"
-              onClick={() => {
-                if (
-                  typeof window !== "undefined" &&
-                  typeof (window as any).fbq === "function"
-                ) {
-                  (window as any).fbq("track", "Lead");
-                }
-              }}
-            >
-              🎁 ¡Obtené tu bono YA!
-            </a>
+          <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
+            {CTAButton}
           </div>
         )}
         <footer className="text-center text-sm text-gray-400 border-t border-white/10 pt-4">
-          Juego responsable +18 · © {new Date().getFullYear()} Ganamos365
+          Juego responsable +18 · © {new Date().getFullYear()} · Pepe Stars
         </footer>
       </div>
     </div>
