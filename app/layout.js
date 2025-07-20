@@ -65,6 +65,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
+      <meta name="facebook-domain-verification" content="i2ip4nczwdg93cqmt3i8dieicd9gsm" />
         <script>
           {`
 !function(f,b,e,v,n,t,s)
