@@ -12,22 +12,24 @@ export default function CasinoLanding() {
 
   let CTAButton = (
     <div ref={ctaRef} className="flex justify-center mb-12 animate-bounce">
-      <a
-        href={waLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-10 py-3 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
-        onClick={() => {
-          if (
-            typeof window !== "undefined" &&
-            typeof (window as any).fbq === "function"
-          ) {
-            (window as any).fbq("track", "Lead");
-          }
-        }}
-      >
-        🎁 Contactar con una cajera
-      </a>
+      <button>
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-12 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
+          onClick={() => {
+            if (
+              typeof window !== "undefined" &&
+              typeof (window as any).fbq === "function"
+            ) {
+              (window as any).fbq("track", "Lead");
+            }
+          }}
+        >
+          🎁 Contactar con una cajera
+        </a>
+      </button>
     </div>
   );
 
@@ -51,7 +53,6 @@ export default function CasinoLanding() {
         setShowStickyCTA(!isVisible);
       }
     };
-    
 
     randomizePlayers();
     window.addEventListener("scroll", handleScroll);
