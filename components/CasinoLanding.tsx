@@ -11,7 +11,7 @@ export default function CasinoLanding() {
   const waLink = "https://tiny.one/2p8dh8ks";
 
   let CTAButton = (
-    <div ref={ctaRef} className="flex justify-center mb-12 animate-ownPulse">
+    <div className="flex justify-center mb-12 animate-ownPulse">
       <button>
         <a
           href={waLink}
@@ -49,7 +49,7 @@ export default function CasinoLanding() {
     const handleScroll = () => {
       if (ctaRef.current) {
         const rect = ctaRef.current.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
         setShowStickyCTA(!isVisible);
       }
     };
@@ -76,10 +76,9 @@ export default function CasinoLanding() {
           <span className="animate-pulse">|</span>
         </h1>
         <p className="text-center text-gray-300 mb-10 max-w-2xl mx-auto">
-        🔽Reclama tu bonus haciendo click aca🔽 
+          🔽Reclama tu bonus haciendo click aca🔽
         </p>
-
-        {CTAButton}
+        <div ref={ctaRef}>{CTAButton}</div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 max-w-4xl gap-3 sm:gap-5 mx-auto mb-6">
           <Card
@@ -143,7 +142,7 @@ export default function CasinoLanding() {
             className="text-xl md:text-2xl font-bold bg-blue-700 hover:bg-blue-600 px-6 py-2 rounded-lg cursor-pointer transition-all duration-300"
             onClick={() =>
               window.open(
-                "https://www.facebook.com/share/16bnLMWvUD/?mibextid=wwXIfr",
+                "https://www.facebook.com/profile.php?id=61578328837489&rdid=4KDRtVx6hoqlwrus",
                 "_blank"
               )
             }
