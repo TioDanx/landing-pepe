@@ -8,11 +8,11 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: "Ganamos365",
-    template: "%s | Ganamos365",
+    default: "Pepe Stars",
+    template: "%s | Pepe Stars",
   },
   description:
-    "Sumate a Ganamos365, el casino online con bonos exclusivos, retiros 24hs y miles de jugadores activos. ¡Obtené tu bono YA!",
+    "Sumate a Pepe Stars, el casino online con bonos exclusivos, retiros 24hs y miles de jugadores activos. ¡Obtené tu bono YA!",
   keywords: [
     "casino online",
     "casino virtual",
@@ -21,7 +21,7 @@ export const metadata = {
     "casino online con retiros 24hs",
     "casino online con bonos",
     "casino online con bonos de bienvenida",
-    "Ganamos365",
+    "Pepe Stars",
     "bono de bienvenida",
     "casino con Mercado Pago",
     "retirar dinero 24hs",
@@ -30,17 +30,17 @@ export const metadata = {
     "casino confiable",
   ],
   openGraph: {
-    title: "Ganamos365 - Casino Online con Bonos y Retiros 24hs",
+    title: "Pepe Stars - Casino Online con Bonos y Retiros 24hs",
     description:
-      "Sumate a Ganamos365, el casino online con bonos exclusivos, retiros 24hs y miles de jugadores activos.",
-    url: "https://ganamos365landing.vercel.app",
-    siteName: "Ganamos365",
+      "Sumate a Pepe Stars, el casino online con bonos exclusivos, retiros 24hs y miles de jugadores activos.",
+    url: "https://pepestarsnew.vercel.app",
+    siteName: "Pepe Stars",
     images: [
       {
         url: "/logo.webp",
         width: 800,
         height: 600,
-        alt: "Logo de Ganamos365",
+        alt: "Logo de Pepe Stars",
       },
     ],
     locale: "es_AR",
@@ -48,9 +48,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ganamos365 - Casino Online",
+    title: "Pepe Stars - Casino Online",
     description:
-      "Bonos de bienvenida, retiros rápidos, +10.000 jugadores activos. ¡Probá tu suerte en Ganamos365!",
+      "Bonos de bienvenida, retiros rápidos, +10.000 jugadores activos. ¡Probá tu suerte en Pepe Stars!",
     images: ["/logo.webp"],
   },
   icons: {
@@ -58,7 +58,7 @@ export const metadata = {
     shortcut: "/logo.webp",
     apple: "/logo.webp",
   },
-  metadataBase: new URL("https://ganamos365landing.vercel.app"),
+  metadataBase: new URL("https://pepestarsnew.vercel.app"),
 };
 
 export default function RootLayout({ children }) {

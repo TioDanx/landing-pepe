@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+    --animate-ownPulse: ownPulse 2s ease-in-out infinite;
+    @keyframes ownPulse {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+  }

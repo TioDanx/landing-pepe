@@ -11,13 +11,13 @@ export default function CasinoLanding() {
   const waLink = "https://tiny.one/2p8dh8ks";
 
   let CTAButton = (
-    <div ref={ctaRef} className="flex justify-center mb-12 animate-bounce">
+    <div ref={ctaRef} className="flex justify-center mb-12 animate-ownPulse">
       <button>
         <a
           href={waLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-12 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
+          className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
           onClick={() => {
             if (
               typeof window !== "undefined" &&
@@ -27,7 +27,7 @@ export default function CasinoLanding() {
             }
           }}
         >
-          🎁 Contactar con una cajera
+          🍀Contactar con una cajera🍀
         </a>
       </button>
     </div>
@@ -63,22 +63,20 @@ export default function CasinoLanding() {
     <div className="relative min-h-dvh w-full overflow-hidden text-white font-sans">
       <div className="absolute inset-0 z-0">
         <div className="h-full w-full bg-[url('/bg.webp')] bg-center bg-cover bg-no-repeat" />
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-orange-300 to-white opacity-20" />
-        <div className="absolute inset-0 pointer-events-none backdrop-blur-sm" />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-black to-neutral-800 opacity-80" />
       </div>
 
       <div className="relative z-10 px-4 py-10 max-w-screen-xl mx-auto">
-        <div className="flex justify-center mb-[-50px] mt-[-50px]">
+        <div className="flex justify-center mb-[-70px] mt-[-50px]">
           <Image src="/logo.png" alt="logo" width={300} height={300} />
         </div>
 
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 ">
-          Bienvenidos a Pepestars
+          Bienvenidos a Pepe Stars
           <span className="animate-pulse">|</span>
         </h1>
-        <p className="text-center text-gray-200 mb-10 max-w-2xl mx-auto">
-          Tu destino online para la mejor experiencia en juegos y promociones
-          exclusivas.
+        <p className="text-center text-gray-300 mb-10 max-w-2xl mx-auto">
+        🔽Reclama tu bonus haciendo click aca🔽 
         </p>
 
         {CTAButton}
