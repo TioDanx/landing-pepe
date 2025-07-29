@@ -67,18 +67,26 @@ export default function CasinoLanding() {
       </div>
 
       <div className="relative z-10 px-4 py-10 max-w-screen-xl mx-auto">
-        <div className="flex justify-center mb-[-70px] mt-[-50px]">
-          <Image src="/logo.png" alt="logo" width={300} height={300} />
-        </div>
+        <div className="hero min-h-dvh">
+          <div className="flex justify-center mb-[-30px] mt-[-50px]">
+            <Image src="/logo.png" alt="logo" width={300} height={300} />
+          </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 ">
-          Bienvenidos a Pepe Stars
-          <span className="animate-pulse">|</span>
-        </h1>
-        <p className="text-center text-gray-300 mb-10 max-w-2xl mx-auto">
-          🔽Reclama tu bonus haciendo click aca🔽
-        </p>
-        <div ref={ctaRef}>{CTAButton}</div>
+          <h1 className="text-3xl md:text-5xl font-bold text-center mb-6 ">
+            ACCESO VIP EXCLUSIVO
+          </h1>
+          <h1 className="text-5xl md:text-5xl font-bold text-center mb-10 text-yellow-400 text-shadow-md animate-pulse rotate-355 text-shadow-orange-300">
+            ¡BONUS DE BIENVENIDA!
+          </h1>
+          <p className="text-center w-auto text-gray-300 mx-auto py-4 mb-10 border-b-red-400 border-t-red-400 border-b-2 border-t-2 text-2xl">
+          ⏳ Oferta por tiempo limitado ⏳
+          </p>
+
+          <p className="text-center w-auto text-gray-300 mb-10">
+          👇🟢 ¡Escribinos por WhatsApp acá abajo!
+          </p>
+          <div ref={ctaRef}>{CTAButton}</div>
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 max-w-4xl gap-3 sm:gap-5 mx-auto mb-6">
           <Card
