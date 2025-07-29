@@ -79,11 +79,11 @@ export default function CasinoLanding() {
             ¡BONUS DE BIENVENIDA!
           </h1>
           <p className="text-center w-auto text-gray-300 mx-auto py-4 mb-10 border-b-red-400 border-t-red-400 border-b-2 border-t-2 text-2xl">
-          ⏳ Oferta por tiempo limitado ⏳
+            ⏳ Oferta por tiempo limitado ⏳
           </p>
 
-          <p className="text-center w-auto text-gray-300 mb-10">
-          👇🟢 ¡Escribinos por WhatsApp acá abajo!
+          <p className="text-center w-auto text-gray-300 mb-15">
+            👇🟢 ¡Escribinos por WhatsApp acá abajo!
           </p>
           <div ref={ctaRef}>{CTAButton}</div>
         </div>
