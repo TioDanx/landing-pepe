@@ -4,13 +4,12 @@ import Card from "./Card";
 import Image from "next/image";
 import Testimonial from "./Testimonial";
 
-const waLinks: string[] = ["https://tiny.one/2p8dh8ks", "https://wa.link/wwyj0g", "https://wa.link/pa8app"]
+const waLinks: string[] = ["https://wa.link/wwyj0g", "https://wa.link/pa8app"]
 
 export default function CasinoLanding() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const [players, setPlayers] = useState(10000);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
-  const waLink = "https://tiny.one/2p8dh8ks";
 
   let CTAButton = (
     <div className="flex justify-center mb-12 animate-ownPulse">
