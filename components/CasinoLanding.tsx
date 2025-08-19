@@ -15,7 +15,7 @@ export default function CasinoLanding() {
     <div className="flex justify-center mb-12 animate-ownPulse">
       <button>
         <a
-          href={waLinks[Math.floor(Math.random() * 3)]}
+          href={waLinks[Math.floor(Math.random() * 2)]}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
