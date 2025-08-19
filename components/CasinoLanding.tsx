@@ -4,7 +4,7 @@ import Card from "./Card";
 import Image from "next/image";
 import Testimonial from "./Testimonial";
 
-const waLinks: string[] = ["https://wa.link/wwyj0g", "https://wa.link/pa8app"]
+const waLinks: string[] = ["https://wa.link/wwyj0g", "https://wa.link/pa8app", "https://wa.link/j6fy8r"]
 
 export default function CasinoLanding() {
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ export default function CasinoLanding() {
     <div className="flex justify-center mb-12 animate-ownPulse">
       <button>
         <a
-          href={waLinks[Math.floor(Math.random() * 2)]}
+          href={waLinks[Math.floor(Math.random() * 3)]}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
