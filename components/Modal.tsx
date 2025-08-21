@@ -62,7 +62,7 @@ const Modal: React.FC<ModalProps> = ({
             className="p-3 rounded-md text-white w-full bg-neutral-800 placeholder-gray-400"
           />
           <input
-            type="text"
+            type="number"
             placeholder="Monto a cargar"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}

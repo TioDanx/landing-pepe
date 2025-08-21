@@ -37,9 +37,6 @@ export default function CasinoLanding() {
     </div>
   );
 
-
-  
-
   useEffect(() => {
     const handleScroll = () => {
       if (ctaRef.current) {
