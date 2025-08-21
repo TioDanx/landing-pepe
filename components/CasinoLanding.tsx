@@ -21,9 +21,6 @@ export default function CasinoLanding() {
 
   // Modal state
   const [showModal, setShowModal] = useState(false);
-  const [name, setName] = useState("");
-  const [amount, setAmount] = useState("");
-  const [wantsBonus, setWantsBonus] = useState(true);
 
   let CTAButton = (
     <div className="flex justify-center mb-12 animate-ownPulse">
@@ -55,12 +52,6 @@ export default function CasinoLanding() {
       {showModal && (
         <Modal
           {...{
-            name,
-            setName,
-            setAmount,
-            setWantsBonus,
-            amount,
-            wantsBonus,
             setShowModal,
           }}
         />
