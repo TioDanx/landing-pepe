@@ -1,15 +1,13 @@
 interface ModalProps {
   setShowModal: (value: boolean) => void;
 }
-const activeNumbers: number[] = [1176234180, 1176234188, 1121939002];
-
+const activeNumbers: number[] = [1176234180, 1176234188];
+ //1121939002
 const Modal: React.FC<ModalProps> = ({
   setShowModal,
 }) => {
   const handleClick = () => {
-    
-
-    const randomIndex = Math.floor(Math.random() * activeNumbers.length);
+    const randomIndex = Math.floor(Math.random() * 2);
     const number = activeNumbers[randomIndex];
 
     const waLink = `https://wa.me/54${number}?text=${encodeURIComponent(
