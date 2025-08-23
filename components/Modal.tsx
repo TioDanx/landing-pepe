@@ -2,10 +2,8 @@ interface ModalProps {
   setShowModal: (value: boolean) => void;
 }
 const activeNumbers: number[] = [1176234180, 1176234188];
- //1121939002
-const Modal: React.FC<ModalProps> = ({
-  setShowModal,
-}) => {
+//1121939002
+const Modal: React.FC<ModalProps> = ({ setShowModal }) => {
   const handleClick = () => {
     const randomIndex = Math.floor(Math.random() * 2);
     const number = activeNumbers[randomIndex];
@@ -34,7 +32,8 @@ const Modal: React.FC<ModalProps> = ({
           ⚠️ RECORDÁ ⚠️
         </h2>
         <p className="text-red-400 mb-6 text-center font-semibold">
-          NO DAMOS FICHAS GRATIS SIN CARGA, EL BONUS ES CON TU PRIMERA CARGA. <br />
+          NO DAMOS FICHAS GRATIS SIN CARGA, EL BONUS ES CON TU PRIMERA CARGA.{" "}
+          <br />
           ¿IGUAL QUERÉS CONTINUAR?
         </p>
 
