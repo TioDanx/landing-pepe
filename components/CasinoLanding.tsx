@@ -6,9 +6,9 @@ import Testimonial from "./Testimonial";
 import Modal from "./Modal";
 
 const waLinks: string[] = [
-  "https://wa.link/wwyj0g",
-  "https://wa.link/pa8app",
-  "https://wa.link/j6fy8r",
+  "https://wa.link/23xhk1",
+  "https://wa.link/23xhk1",
+  "https://wa.link/23xhk1",
 ];
 // https://wa.link/wwyj0g = 11 7623-4180 
 // // https://wa.link/pa8app = 11 7623-4188 

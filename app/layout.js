@@ -37,7 +37,7 @@ export const metadata = {
     siteName: "Pepe Stars",
     images: [
       {
-        url: "/logo.webp",
+        url: "/logo.png",
         width: 800,
         height: 600,
         alt: "Logo de Pepe Stars",
@@ -51,12 +51,12 @@ export const metadata = {
     title: "Pepe Stars - Casino Online",
     description:
       "Bonos de bienvenida, retiros rápidos, +10.000 jugadores activos. ¡Probá tu suerte en Pepe Stars!",
-    images: ["/logo.webp"],
+    images: ["/logo.png"],
   },
   icons: {
-    icon: "/logo.webp",
-    shortcut: "/logo.webp",
-    apple: "/logo.webp",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   metadataBase: new URL("https://pepestarsnew.vercel.app"),
 };
