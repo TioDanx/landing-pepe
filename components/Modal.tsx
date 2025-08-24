@@ -8,7 +8,7 @@ const Modal: React.FC<ModalProps> = ({ setShowModal }) => {
     const randomIndex = Math.floor(Math.random() * 2);
     const number = activeNumbers[randomIndex];
 
-    const waLink = `https://wa.me/54${number}?text=${encodeURIComponent(
+    const waLink = `https://wa.me/541137569278?text=${encodeURIComponent(
       `Hola! Quisiera hablar con una cajera y que me creen un perfil.`
     )}`;
 
