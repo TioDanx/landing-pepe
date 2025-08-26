@@ -1,7 +1,7 @@
 interface ModalProps {
   setShowModal: (value: boolean) => void;
 }
-const activeNumbers: number[] = [1176234180, 1137569278];
+const activeNumbers: number[] = [1176234180];
 //1121939002
 const Modal: React.FC<ModalProps> = ({ setShowModal }) => {
   const handleClick = () => {
