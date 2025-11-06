@@ -5,30 +5,21 @@ import Image from "next/image";
 import Testimonial from "./Testimonial";
 import Modal from "./Modal";
 
-const waLinks: string[] = [
-  "https://wa.link/23xhk1",
-  "https://wa.link/23xhk1",
-  "https://wa.link/23xhk1",
-];
-// https://wa.link/wwyj0g = 11 7623-4180 
-// // https://wa.link/pa8app = 11 7623-4188 
-// // https://wa.link/j6fy8r = 11 2193-9002
 
 export default function CasinoLanding() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const [players, setPlayers] = useState(10000);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
 
-  // Modal state
   const [showModal, setShowModal] = useState(false);
 
   let CTAButton = (
     <div className="flex justify-center mb-12 animate-ownPulse">
       <button
-        onClick={() => setShowModal(true)} // Abrir modal
+        onClick={() => setShowModal(true)} 
       >
         <span className="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-lg px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
-          🍀 Contactar con una cajera 🍀
+          🍀 Contactar por Whatsapp 🍀
         </span>
       </button>
     </div>
@@ -62,7 +53,6 @@ export default function CasinoLanding() {
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-black to-neutral-800 opacity-80" />
         </div>
         <div className="relative z-10 px-4 py-10 max-w-screen-xl mx-auto">
-          {/* Hero */}
           <div className="hero min-h-dvh">
             <div className="flex justify-center mb-[-30px] mt-[-50px]">
               <Image src="/logo.png" alt="logo" width={300} height={300} />
@@ -72,7 +62,7 @@ export default function CasinoLanding() {
               ACCESO VIP EXCLUSIVO
             </h1>
             <h1 className="text-5xl md:text-5xl font-bold text-center mb-10 text-yellow-400 text-shadow-md animate-pulse rotate-355 text-shadow-orange-300">
-              ¡BONUS DE BIENVENIDA!
+              SUPER BONUS <span className="text-8xl">100%</span>
             </h1>
             <p className="text-center w-auto text-gray-300 mx-auto py-4 mb-10 border-b-red-400 border-t-red-400 border-b-2 border-t-2 text-2xl">
               ⏳ Oferta por tiempo limitado ⏳
@@ -84,7 +74,6 @@ export default function CasinoLanding() {
             <div ref={ctaRef}>{CTAButton}</div>
           </div>
 
-          {/* Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-3 max-w-4xl gap-3 sm:gap-5 mx-auto mb-6">
             <Card
               icon="💰"
@@ -118,7 +107,6 @@ export default function CasinoLanding() {
             />
           </div>
 
-          {/* Testimonials */}
           <section className="relative z-10 px-4 py-6 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-10 text-white">
               💬 Clientes Satisfechos

@@ -1,8 +1,7 @@
 interface ModalProps {
   setShowModal: (value: boolean) => void;
 }
-const activeNumbers: number[] = [1176234180, 1121939002];
-//1121939002
+const activeNumbers: number[] = [1138021870];
 const Modal: React.FC<ModalProps> = ({ setShowModal }) => {
   const handleClick = () => {
     const randomIndex = Math.floor(Math.random() * 2);
@@ -14,7 +13,6 @@ const Modal: React.FC<ModalProps> = ({ setShowModal }) => {
 
     window.open(waLink, "_blank");
 
-    // Meta Pixel Lead
     if (
       typeof window !== "undefined" &&
       typeof (window as any).fbq === "function"
